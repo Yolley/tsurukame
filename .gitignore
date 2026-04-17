@@ -2,6 +2,7 @@
 /data.bin
 .DS_Store
 /ios/build/
+/ios/WaniKaniAPI/build/
 /ios/SwiftFormatTools/*
 !/ios/SwiftFormatTools/*.swift
 /sqlite3-extension/proto.dylib
@@ -15,3 +16,4 @@
 /ios/*.dSYM.zip
 /workspace
 /ios/gc_keys.json
+.idea

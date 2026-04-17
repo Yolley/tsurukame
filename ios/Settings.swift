@@ -1,4 +1,4 @@
-// Copyright 2025 David Sansome
+// Copyright 2026 David Sansome
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -67,6 +67,18 @@ typealias SettingEnum = CaseIterable & Codable & CustomStringConvertible & RawRe
     case .both: return "Both"
     case .readingOnly: return "Reading only"
     case .meaningOnly: return "Meaning only"
+    }
+  }
+}
+
+@objc enum LessonOrderMode: UInt, SettingEnum {
+  case fixed = 1
+  case weightedShuffle = 2
+
+  var description: String {
+    switch self {
+    case .fixed: return "Fixed type order"
+    case .weightedShuffle: return "Weighted shuffle"
     }
   }
 }
@@ -184,6 +196,8 @@ protocol SettingProtocol {
   @Setting(false, #keyPath(notificationSounds)) static var notificationSounds: Bool
 
   @Setting(false, #keyPath(prioritizeCurrentLevel)) static var prioritizeCurrentLevel: Bool
+  @EnumSetting(LessonOrderMode.fixed,
+               "lessonOrderMode") static var lessonOrderMode: LessonOrderMode
   @EnumArraySetting([
     .radical,
     .kanji,

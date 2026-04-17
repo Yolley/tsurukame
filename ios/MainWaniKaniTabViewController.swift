@@ -1,4 +1,4 @@
-// Copyright 2025 David Sansome
+// Copyright 2026 David Sansome
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -359,16 +359,12 @@ class MainWaniKaniTabViewController: UITableViewController {
 
     case .startLessons:
       let assignments = services.localCachingClient.getNonExcludedAssignments()
-      var items = ReviewItem.readyForLessons(assignments: assignments,
-                                             localCachingClient: services.localCachingClient)
-        .shuffled()
+      let items = ReviewItem.orderedForLessons(ReviewItem.readyForLessons(assignments: assignments,
+                                                                          localCachingClient: services
+                                                                            .localCachingClient),
+                                               limit: Settings.lessonBatchSize)
       if items.count == 0 {
         return
-      }
-
-      items = items.sorted(by: { a, b in a.compareForLessons(other: b) })
-      if items.count > Settings.lessonBatchSize {
-        items = Array(items[0 ..< Int(Settings.lessonBatchSize)])
       }
 
       let vc = segue.destination as! LessonsViewController
