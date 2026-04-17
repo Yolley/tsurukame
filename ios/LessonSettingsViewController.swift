@@ -1,4 +1,4 @@
-// Copyright 2025 David Sansome
+// Copyright 2026 David Sansome
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,6 +81,10 @@ class LessonSettingsViewController: UITableViewController, TKMViewController {
   // MARK: - Text rendering
 
   private var lessonOrderValueText: String {
+    if Settings.lessonOrderMode == .weightedShuffle {
+      return Settings.lessonOrderMode.description
+    }
+
     var parts = [String]()
     for subjectType in Settings.lessonOrder {
       parts.append(subjectType.description)
@@ -114,7 +118,7 @@ class LessonSettingsViewController: UITableViewController, TKMViewController {
   // MARK: - Tap handlers
 
   private func didTapLessonOrder() {
-    perform(segue: StoryboardSegue.LessonSettings.lessonOrder, sender: self)
+    navigationController?.pushViewController(LessonOrderViewController(), animated: true)
   }
 
   private func didTapLessonBatchSize() {

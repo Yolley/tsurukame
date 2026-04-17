@@ -1,9 +1,11 @@
 PODS:
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
+  - FMDB (2.7.12):
+    - FMDB/standard (= 2.7.12)
+  - FMDB/Core (2.7.12)
+  - FMDB/standard (2.7.12):
+    - FMDB/Core
   - Haneke (1.0.2)
-  - Hippolyte (1.3.0)
+  - Hippolyte (1.3.1)
   - MMDrawerController (0.6.0):
     - MMDrawerController/Core (= 0.6.0)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
@@ -37,9 +39,9 @@ SPEC REPOS:
     - SwiftGen
 
 SPEC CHECKSUMS:
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FMDB: 728731dd336af3936ce00f91d9d8495f5718a0e6
   Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
-  Hippolyte: 62bb4cc730776cebd58a1cb51f5546253597ffd7
+  Hippolyte: 6996a394e7861f1486ca63352b3f8896e167b958
   MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
   Reachability: 8bf74b755b2993968c344b465c13e602db2b1044
   SwiftGen: 4993cbf71cbc4886f775e26f8d5c3a1188ec9f99
