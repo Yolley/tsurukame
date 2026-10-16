@@ -30,9 +30,6 @@
 		6332528E2727F32800ABBA04 /* PillModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6332528D2727F32800ABBA04 /* PillModelItem.swift */; };
 		633252922728131100ABBA04 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633252912728131100ABBA04 /* TableModel.swift */; };
 		633252932728EA1100ABBA04 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633252912728131100ABBA04 /* TableModel.swift */; };
-		63344E802D291C9F002A4FED /* AppStoreRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63344E7C2D291C9F002A4FED /* AppStoreRelease.xcconfig */; };
-		63344E812D291C9F002A4FED /* DeveloperDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63344E7D2D291C9F002A4FED /* DeveloperDebug.xcconfig */; };
-		63344E822D291C9F002A4FED /* TestFlightRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63344E7E2D291C9F002A4FED /* TestFlightRelease.xcconfig */; };
 		63344E8A2D291CAA002A4FED /* ReviewContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63344E832D291CAA002A4FED /* ReviewContainerViewController.swift */; };
 		63344E8B2D291CAA002A4FED /* ReviewQuickSettingsAnswersMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63344E842D291CAA002A4FED /* ReviewQuickSettingsAnswersMenu.swift */; };
 		63344E8C2D291CAA002A4FED /* ReviewQuickSettingsAudioMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63344E852D291CAA002A4FED /* ReviewQuickSettingsAudioMenu.swift */; };
@@ -937,7 +934,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 2710;
 				ORGANIZATIONNAME = "David Sansome";
 				TargetAttributes = {
 					630FD6121FC45BDF00D21C1F = {
@@ -1031,9 +1028,6 @@
 				63C4EA682C258DF0003D3C0B /* UpcomingReviews.storyboard in Resources */,
 				63C4EA6A2C258E0E003D3C0B /* LessonPicker.storyboard in Resources */,
 				63C4EA4C2C257B8A003D3C0B /* Navigation.storyboard in Resources */,
-				63344E802D291C9F002A4FED /* AppStoreRelease.xcconfig in Resources */,
-				63344E812D291C9F002A4FED /* DeveloperDebug.xcconfig in Resources */,
-				63344E822D291C9F002A4FED /* TestFlightRelease.xcconfig in Resources */,
 				6365041F25D7DE0900801C2D /* Lessons.storyboard in Resources */,
 				63BFA78B218EB1B30058E885 /* DownloadModelItem.xib in Resources */,
 				63C4EA762C25991F003D3C0B /* ReviewSettings.storyboard in Resources */,
@@ -1666,7 +1660,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1703,7 +1697,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1729,7 +1723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RMNVST47G;
 				INFOPLIST_FILE = AppStoreScreenshots/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1755,7 +1749,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RMNVST47G;
 				INFOPLIST_FILE = AppStoreScreenshots/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1787,7 +1781,7 @@
 					"FONT_SCREENSHOTTER=1",
 				);
 				INFOPLIST_FILE = FontScreenshotter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1820,7 +1814,7 @@
 					"FONT_SCREENSHOTTER=1",
 				);
 				INFOPLIST_FILE = FontScreenshotter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1845,6 +1839,7 @@
 				DEVELOPMENT_TEAM = 7B2GP77Y4A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = FontScreenshotterUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1871,6 +1866,7 @@
 				DEVELOPMENT_TEAM = 7B2GP77Y4A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = FontScreenshotterUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1898,6 +1894,7 @@
 				DEVELOPMENT_TEAM = 7B2GP77Y4A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1927,6 +1924,7 @@
 				DEVELOPMENT_TEAM = 7B2GP77Y4A;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
